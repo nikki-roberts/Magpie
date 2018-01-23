@@ -1,4 +1,4 @@
-/**
+  /**
  * A program to carry on conversations with a human user. This version:
  * <ul>
  * <li>
@@ -36,6 +36,12 @@ public class Magpie3 {
 				|| findKeyword(statement, "sister") >= 0
 				|| findKeyword(statement, "brother") >= 0) {
 			response = "Tell me more about your family.";
+		} else if (findKeyword(statement, "dog") >= 0
+				|| findKeyword(statement, "cat") >= 0) {
+			response = "I like animals.";
+		} else if (findKeyword(statement, "who") >= 0
+				|| findKeyword(statement, "you") >= 0) {
+			response = "I am Magpie.";
 		} else {
 			response = getRandomResponse();
 		}
